@@ -1,0 +1,7 @@
+uploads/
+reports/
+alerts.json
+inspection_log.json
+.vscode/
+__pycache__/
+*.pyc
