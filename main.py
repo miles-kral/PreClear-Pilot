@@ -29,7 +29,6 @@ import requests
 
 app = FastAPI(title="PreClear Pilot")
 app.add_middleware(SessionMiddleware, secret_key="preclear-demo-secret-key")
-app.mount("/static", StaticFiles(directory="static"), name="static")
 
 # -----------------------------
 # Config
@@ -803,10 +802,6 @@ async def export_filtered_customer_history(
         filename=export_filename,
         media_type="text/csv",
     )
-
-@app.get("/")
-async def landing_page():
-    return FileResponse("index.html")
 
 @app.get("/", response_class=HTMLResponse)
 async def home():
