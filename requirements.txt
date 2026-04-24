@@ -4,4 +4,3 @@ python-multipart
 requests
 reportlab
 itsdangerous
-gunicorn
